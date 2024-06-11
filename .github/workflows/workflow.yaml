@@ -37,7 +37,7 @@ jobs:
      - name: Deploy to Integration
        run: echo "Deploying to integration environment"
        env:
-         DEPLOY_ENV: int
+         DEPLOY_ENV: acc
  deploy-prg:
    needs: build
    runs-on: ubuntu-latest
@@ -46,4 +46,4 @@ jobs:
      - name: Deploy to Production
        run: echo "Deploying to production environment"
        env:
-         DEPLOY_ENV: prg
+         DEPLOY_ENV: prod
