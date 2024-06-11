@@ -17,9 +17,9 @@ jobs:
          username: ${{ secrets.DOCKERHUB_USERNAME }}
          password: ${{ secrets.DOCKERHUB_TOKEN }}
      - name: Build Docker image
-       run: docker build -t PehlivanovRoli/repo1:latest .
+       run: docker build -t rolipehlivanov/repo1:latest .
      - name: Push Docker image
-       run: docker push PehlivanovRoli/repo1:latest
+       run: docker push rolipehlivanov/repo1:latest
  deploy:
    needs: build
    runs-on: ubuntu-latest
