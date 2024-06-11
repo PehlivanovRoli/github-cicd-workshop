@@ -14,6 +14,17 @@ jobs:
       with:
         python-version: '3.12'
     # Add step to install dependencies
+    - name: Istanll balck
+      run: pip install black
+
+    - name: Install Flake8
+      run: pip install flake8
 
   lint:
+    runs-on: ubuntu-latest
+    steps:
     # Complete the lint job configuration
+    - uses: actions/checkout@v4
+    - name: Check formatting
+      working-directory: /workspace/exercise_2/
+      run: black bad_code.py
